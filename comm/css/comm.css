@@ -1,0 +1,111 @@
+body,html {
+    width: 100%; 
+    font-size: 13px; 
+    color: #666;
+}
+* {
+    margin:0; 
+    padding:0; 
+    border:0; 
+    line-height:155%; 
+    letter-spacing: normal;
+}
+ol, ul, li {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+table {
+    border-collapse: separate; 
+    border-spacing: 0; 
+    font-size:13px;
+}
+table caption {
+    overflow: hidden; 
+    font-size: 0; 
+    line-height: 0; 
+    font-size: 13px;
+}
+tbody, tfoot, thead, tr, th, td {
+    margin: 0; 
+    line-height: 155%; 
+    letter-spacing: normal;
+}
+a {
+    cursor: pointer; 
+    text-decoration: none; 
+    color: #666;
+}
+address {font-style: normal;}
+input, select, img {vertical-align: middle;}
+input:focus, textarea:focus, button:focus {outline: none;}
+.input_search {
+    border:0; 
+    background: none; 
+    height: 20px; 
+    width: 155px; 
+    font-size: 12px; 
+    color: #909496; 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* Web Content Accessibility TTS(Text To Speech) Code */
+.blind {
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    overflow: hidden; 
+    display: inline-block !important; 
+    width: 1px !important; 
+    height: 1px !important; 
+    margin: 0 !important; 
+    font-size: 0 !important; 
+    line-height: 0 !important;
+}
+
+/* 바로가기 */
+#accessibilityMenu {
+    position: absolute; 
+    overflow: hidden; 
+    visibility: hidden; 
+    font-size: 0; 
+    line-height: 0;
+}
+
+/* Common */
+.line_bg {height: 2px; background-color: #f5f5f5;}
+.img_bor {border: 1px solid #ddd;}
+
+/* 레이아웃 */
+#wrap {position: relative; width: 100%;}
+/* 사이트맵 */
+#sitemap{position: relative; width: 100%; clear: both; overflow: hidden; background-color: #f5f5f5;}
+#sitemap .sitemap_in{position:relative; margin:0 auto; width:1020px; overflow:hidden; padding:40px 0;}
+	.sitemap_in dl{float: left; width: 16.66666666666%;}
+	.sitemap_in dt{font-size: 16px; color: #444; letter-spacing: -0.7pt; font-weight: 600; padding: 0 0 10px 0;}
+	.sitemap_in dt.two{padding-top: 40px;}
+	.sitemap_in dd{line-height: 24px}
+	.sitemap_in dd a:link, .sitemap_in dd a:visited{line-height: 24px; letter-spacing: -0.7pt}
+
+/* 하단 */
+#footer {position: relative; width: 100%; clear: both; overflow: hidden;}
+#footer .foot_in {position: relative; margin: 0 auto; width: 1020px; overflow: hidden; padding: 25px 0 50px 0;}
+#footer .foot_bn{position:relative; overflow:hidden;}
+	.foot_bn li{float:left; padding:0 16px; background:url('../../img/foot_line.gif') right 8px no-repeat}
+	.foot_bn li strong{font-weight:600}
+	.foot_bn li.first{padding:0 16px 0 0}
+	.foot_bn li.last{background:none; padding:0 0 0 16px}
+	.foot_bn li a:link, .foot_bn li a:visited{ letter-spacing:-0.7pt; line-height:23px;}
+	.foot_bn li a:hover{text-decoration:none}
+#footer .copy{position:relative; overflow:hidden; clear:both; padding-top:15px}
+#footer .copy li{line-height:22px;}
+#footer .copy li strong{font-weight:600}
+#footer .copy a:link, .copy a:visited{line-height:22px; text-decoration:underline}
+#footer .copy li.copyright{font-size:12px; color:#999; padding-top:10px}
+#footer .copy li.copyright a:link, #footer .copy li.copyright a:visited{font-size:12px; color:#999; text-decoration:none}
+
+
+/* 게시판 페이징 */
+.page_num {position: relative; width: 100%; text-align: center; padding: 15px 0 0 0 }
+.page_num ul.pagination {display: inline-block; padding: 0; margin: 0 }
+.page_num ul.pagination li {display: inline }
+.page_num ul.pagination li a {color: #666; float: left; padding: 6px 12px; text-decoration: none; border: 1px solid #CBCBCB; margin: 0 1px }
+.page_num ul.pagination li a.active { background: #484C57; color: #FFF; border: 1px solid #484C57 }

@@ -1,0 +1,377 @@
+@import 'common';
+
+.treatment.page-header {
+    background-image: url(/comm/img/treatment/bg_page_header.jpg);
+}
+
+.treatment.department {
+    .section-content {
+        .gallery-list {
+            li {
+                cursor: pointer;
+                .details {
+                    @include transition();
+                }
+                &:hover {
+                    .details {
+                        color: #fff;
+                        border-color: $kcolor;
+                        background-color: $kcolor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.treatment.process {
+    .section-header {
+        .attention {
+            margin: 0;
+            font-size: 16px;
+            color: #8a7968;
+            line-height: 34px;
+            &:before {
+                content: "※ ";
+            }
+        }
+    }
+    .section-content {
+        > ol {
+            > li {
+                position: relative;
+                display: table;
+                width: 100%;
+                padding: 10px;
+                table-layout: fixed;
+                margin-bottom: 80px;
+                border: 3px solid #b9afa4;
+                border-radius: 75px;
+                &:after {
+                    position: absolute;
+                    bottom: -66px;
+                    left: 50%;
+                    color: #c9cacb;
+                    font-size: 30px;
+                    content: "\E809";
+                    font-family: "fontello";
+                    margin-left: -12.5px;
+                }
+                > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                > .step-area {
+                    width: 125px;
+                    height: 125px;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: #8a7968;
+                    small {
+                        display: block;
+                        font-size: 12px;
+                        font-weight: 500;
+                        @include roboto();
+                        margin: 0 auto 10px;
+                    }
+                    h5 {
+                        display: block;
+                        font-size: 20px;
+                        font-weight: 400;
+                        margin: 0 auto;
+                        text-align: center;
+                        @include dh();
+                    }
+                }
+                .details {
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 60px;
+                    p {
+                        font-size: 16px;
+                        color: #57575a;
+                        font-weight: 300;
+                        line-height: 30px;
+                        span {
+                            color: $kcolor;
+                        }
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    &:after {
+                        content: "";
+                    }
+                }
+                &:nth-of-type(1),&:nth-of-type(2) {
+                    > .step-area {
+                        h5 {
+                            width: 60px;
+                            text-align-last: justify;
+                        }
+                    }
+                }
+                &:nth-of-type(even) {
+                    border-color: #bebfc1;
+                    > .step-area {
+                        background-color: #939598;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.treatment.inquiry {
+    .section-content {
+        article {
+            position: relative;
+            padding: 350px 25px 0;
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: 1170px 565px;
+            .office-title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 130px;
+                height: 130px;
+                padding: 40px 0;
+                display: block;
+                color: #fff;
+                text-align: center;
+                h5 {
+                    font-size: 23px;
+                    @include dh();
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                    small {
+                        display: block;
+                        font-size: 13px;
+                        margin: 0 auto;
+                        line-height: 24px;
+                    }
+                }
+                p {
+                    font-size: 12px;
+                    @include roboto();
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    color: rgba(#fff, .5);
+                }
+            }
+            .article-content {
+                padding: 40px 45px 0;
+                background-color: #fff;
+                .information {
+                    overflow: hidden;
+                    > dl {
+                        float: left;
+                        > dt {
+                            font-size: 18px;
+                            color: #57575a;
+                            font-weight: 400;
+                            margin-bottom: 20px;
+                        }
+                        > dd {
+                            display: table;
+                            width: 100%;
+                            margin-bottom: 0;
+                            > div {
+                                display: table-cell;
+                                height: 100px;
+                                vertical-align: middle;
+                                &.ico-images {
+                                    width: 100px;
+                                    text-align: center;
+                                    border-radius: 10px;
+                                    background-color: #e9eaea;
+                                    img {
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                        }
+                        &.contact {
+                            width: 430px;
+                            > dd {
+                                .details {
+                                    padding-left: 30px;
+                                    > p {
+                                        font-size: 15px;
+                                        color: #57575a;
+                                        font-weight: 400;
+                                        margin-bottom: 15px;
+                                    }
+                                    > strong {
+                                        font-size: 30px;
+                                        color: $kcolor;
+                                        line-height: 30px;
+                                        @include roboto();
+                                    }
+                                }
+                            }
+                        }
+                        &.consultation-hours {
+                            width: 600px;
+                            .details {
+                                padding-left: 30px;
+                                > ol {
+                                    overflow: hidden;
+                                    > li {
+                                        float: left;
+                                        width: 50%;
+                                        &:nth-of-type(2n + 1) {
+                                            clear: left;
+                                        }
+                                        > dl {
+                                            font-size: 0;
+                                            > dt {
+                                                width: 50px;
+                                                font-size: 14px;
+                                                color: #57575a;
+                                                line-height: 24px;
+                                                font-weight: 400;
+                                                text-align-last: justify;
+                                                display: inline-block;
+                                                letter-spacing: -1px;
+                                            }
+                                            > dd {
+                                                display: inline-block;
+                                                font-size: 14px;
+                                                color: #57575a;
+                                                line-height: 24px;
+                                                margin-left: 30px;
+                                                margin-bottom: 0;
+                                                @include roboto();
+                                            }
+                                        }
+                                    }
+                                }
+                                .attention {
+                                    font-size: 13px;
+                                    color: #57575a;
+                                    font-weight: 400;
+                                    margin-top: 15px;
+                                    &:before {
+                                        content: "※ ";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                hr {
+                    display: block;
+                    width: 100%;
+                    border-top: 1px solid #dfdfdf;
+                    margin: 40px 0;
+                }
+                h6 {
+                    font-size: 18px;
+                    color: #57575a;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+            }
+            & ~ article {
+                margin-top: 100px;
+            }
+            &.ilsan {
+                background-image: url(/comm/img/treatment/bg_ilsan.jpg);
+                .office-title {
+                    background-color: #705646;
+                }
+            }
+            &.guro {
+                background-image: url(/comm/img/treatment/bg_guro.jpg);
+                .office-title {
+                    background-color: #a18757;
+                }
+            }
+            &.suji {
+                background-image: url(/comm/img/treatment/bg_suji.jpg);
+                .office-title {
+                    background-color: #526f6a;
+                }
+            }
+            &.ansan {
+                background-image: url(/comm/img/treatment/bg_ansan.jpg);
+                .office-title {
+                    padding: 31px 0;
+                    background-color: #577485;
+                }
+            }
+            &.dongdaemun {
+                background-image: url(/comm/img/treatment/bg_dongdaemun.jpg);
+                .office-title {
+                    background-color: #5b5c61;
+                }
+                .article-content {
+                    .information {
+                        .consultation-hours {
+                            .details {
+                                ol {
+                                    li {
+                                        .attention {
+                                            margin-top: 0;
+                                            line-height: 24px;
+                                        }
+                                    }
+                                }
+                                small {
+                                    font-size: 13px;
+                                    color: #57575a;
+                                    font-weight: 400;
+                                    display: block;
+                                    float: left;
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.hongdae {
+                background-image: url(/comm/img/treatment/bg_hongdae.jpg);
+                .office-title {
+                    padding: 19px 0;
+                    background-color: #906253;
+                }
+                .article-content {
+                    .information {
+                        .consultation-hours {
+                            .details {
+                                ol {
+                                    li {
+                                        dl {
+                                            dt {
+                                                width: 64px;
+                                            }
+                                        }
+                                        &:nth-of-type(2) {
+                                            padding-left: 20px;
+                                            dl {
+                                                dt {
+                                                    width: 50px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .attention {
+                                    line-height: 24px;
+                                    & ~ .attention {
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

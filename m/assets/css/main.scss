@@ -1,0 +1,392 @@
+@import 'common';
+
+.jumbotron {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    .slick-slide {
+        outline: none !important;
+        display: table !important;
+        width: 100%;
+        height: 260px;
+        color: #fff;
+        text-align: center;
+        padding-top: 50px;
+        background-image: url(/m/assets/images/main/bg_visual_top.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        .details {
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            h2 {
+                position: relative;
+                top: -30px;
+                opacity: 0;
+                font-size: 25px;
+                font-weight: 400;
+                line-height: 33px;
+                @include dh();
+                @include transition($duration: .8s, $delay: .2s);
+            }
+            hr {
+                position: relative;
+                top: -30px;
+                opacity: 0;
+                display: block;
+                width: 40px;
+                border-top: 3px solid #ff700e;
+                margin: 15 auto 20px;
+                @include transition($duration: .8s, $delay: .5s);
+            }
+            p {
+                position: relative;
+                top: -30px;
+                opacity: 0;
+                font-size: 12px;
+                color: #fff;
+                font-weight: lighter;
+                letter-spacing: 1px;
+                @include transition($duration: .8s, $delay: .8s);
+            }
+        }
+        &.action {
+            .details {
+                h2 {
+                    top: 0;
+                    opacity: 1;
+                }
+                hr {
+                    top: 0;
+                    opacity: 1;
+                }
+                p {
+                    top: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+.office-quick {
+    overflow: hidden;
+    article {
+        display: table;
+        width: 50%;
+        float: left;
+        background-color: black;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        @include transition();
+        > div {
+            display: table-cell;
+            height: 65px;
+            vertical-align: middle;
+            text-align: center;
+            color: #fff;
+            > h3 {
+                font-size: 16px;
+                @include dh();
+                font-weight: 400;
+            }
+            > small {
+                display: block;
+                font-size: 10px;
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+            .btn-more {
+                display: none;
+                width: 65px;
+                font-size: 10px;
+                color: #fff;
+                line-height: 18px;
+                margin: 10px auto 0;
+                border-radius: 30px;
+                border: 1px solid #fff;
+            }
+        }
+        &.ilsan {
+            background-image: url(/m/assets/images/main/bg_office01.jpg);
+        }
+        &.guro {
+            background-image: url(/m/assets/images/main/bg_office02.jpg);
+        }
+        &.suji {
+            background-image: url(/m/assets/images/main/bg_office03.jpg);
+        }
+        &.ansan {
+            background-image: url(/m/assets/images/main/bg_office04.jpg);
+        }
+        &.dongdaemun {
+            background-image: url(/m/assets/images/main/bg_office05.jpg);
+        }
+        &.hongdae {
+            background-image: url(/m/assets/images/main/bg_office06.jpg);
+        }
+        &:hover, &:focus {
+            background: none;
+            background-color: #ff700e;
+            > div {
+                small {
+                    display: none;
+                }
+                .btn-more {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+.office-info {
+    position: relative;
+    color: #fff;
+    background-color: $kcolor;
+    .office-list {
+        .slick-slide {
+            outline: none;
+            width: 100%;
+            height: 430px;
+            padding: 25px 10px 0;
+            h3 {
+                font-size: 18px;
+                letter-spacing: -.5px;
+                @include dh();
+                small {
+                    font-size: 13px;
+                    letter-spacing: -.5px;
+                }
+            }
+            P {
+                font-size: 10px;
+                margin-top: 5px;
+                color: rgba(#fff, .6);
+                letter-spacing: 1px;
+                font-weight: lighter;
+            }
+            hr {
+                display: block;
+                width: 30px;
+                border-top: 3px solid #fff;
+                margin: 20px 0;
+            }
+            > .ico-list {
+                > li {
+                    position: relative;
+                    font-size: 13px;
+                    font-weight: 300;
+                    padding-left: 20px;
+                    line-height: 22px;
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-family: "fontello";
+                    }
+                    &.traffic {
+                        &:before {
+                            content: "\E800";
+                        }
+                    }
+                    &.addr {
+                        &:before {
+                            content: "\E801";
+                        }
+                    }
+                    &.tel {
+                        &:before {
+                            content: "\E802";
+                        }
+                    }
+                    &.fax {
+                        &:before {
+                            content: "\E803";
+                        }
+                    }
+                    &.time {
+                        &:before {
+                            content: "\E804";
+                        }
+                    }
+                }
+            }
+            .btn-area {
+                position: absolute;
+                bottom: 55px;
+                left: 0;
+                width: 100%;
+                .btn-more {
+                    font-size: 13px;
+                    color: #fff;
+                    font-weight: 300;
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 300px;
+                    line-height: 35px;
+                    text-align: center;
+                    border: 1px solid #fff;
+                }
+            }
+        }
+        .slick-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            text-align: center;
+            > li {
+                display: inline-block;
+                > button {
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    margin: 0 5px;
+                    padding: 0;
+                    border-radius: 50%;
+                    text-indent: -9999999px;
+                    background: none;
+                    border: 1px solid #fff;
+                }
+                &.slick-active {
+                    > button {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.information {
+    margin-top: 10px;
+    article {
+        padding: 20px 10px 0;
+        margin-bottom: 10px;
+        padding-bottom: 80%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 100%;
+        h3 {
+            @include dh();
+            color: #57575a;
+            font-size: 18px;
+            letter-spacing: -.5px;
+            small {
+                font-size: 13px;
+            }
+        }
+        p {
+            color: #57575a;
+            font-size: 10px;
+            letter-spacing: 1px;
+            @include dh();
+            margin-top: 5px;
+        }
+        dl {
+            overflow: hidden;
+            margin-top: 15px;
+            dt {
+                float: left;
+                clear: both;
+                width: 50px;
+                font-size: 12px;
+                line-height: 20px;
+                color: #fff;
+                font-weight: 400;
+                padding: 0 5px;
+                margin-bottom: 2px;
+                text-align: justify;
+                text-align-last: justify;
+                border-radius: 5px;
+                letter-spacing: -1.9px;
+                background-color: #57575a;
+            }
+            dd {
+                width: 75%;
+                font-size: 12px;
+                color: #57575a;
+                line-height: 20px;
+                float: left;
+                margin: 0;
+                margin-left: 20px;
+            }
+        }
+        figure {
+            margin-top: 20px;
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &:nth-of-type(even) {
+            dl {
+                dt {
+                    background-color: #8a7968;
+                }
+            }
+        }
+        &.ilsan {
+            background-image: url(/m/assets/images/main/bg_information01.jpg);
+        }
+        &.guro {
+            background-image: url(/m/assets/images/main/bg_information02.jpg);
+        }
+        &.suji {
+            background-image: url(/m/assets/images/main/bg_information03.jpg);
+        }
+        &.ansan {
+            background-image: url(/m/assets/images/main/bg_information04.jpg);
+        }
+        &.dongdaemun {
+            background-image: url(/m/assets/images/main/bg_information05.jpg);
+        }
+        &.hongdae {
+            background-image: url(/m/assets/images/main/bg_information06.jpg);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

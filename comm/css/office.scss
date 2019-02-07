@@ -1,0 +1,700 @@
+@import 'common';
+
+.office.page-header {
+    background-image: url(/comm/img/office/bg_page_header.jpg);
+}
+
+/* 지점 공통 */
+.office {
+    .section-content {
+        .tab-menu {
+            text-align: center;
+            > ul {
+                font-size: 0;
+                > li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    > a {
+                        display: block;
+                        width: 170px;
+                        height: 55px;
+                        font-size: 16px;
+                        color: #939598;
+                        line-height: 53px;
+                        font-weight: bold;
+                        text-align: center;
+                        border-radius: 30px;
+                        border: 1px solid #bebfc1;
+                        @include transition();
+                        @include roboto();
+                        &:hover {
+                            opacity: .7;
+                            color: #fff;
+                            border-color: $kcolor;
+                            background-color: $kcolor;
+                        }
+                    }
+                    &.active {
+                        a {
+                            color: #fff;
+                            border-color: $kcolor;
+                            background-color: $kcolor;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .offce-slide {
+            position: relative;
+            margin-top: 40px;
+            ul {
+                li {
+                    outline: none;
+                    figure {
+                        .img-fluid {
+                            width: 100%;
+                        }
+                    }
+                }
+                > button {
+                    position: absolute;
+                    top: 50%;
+                    z-index: 1;
+                    cursor: pointer;
+                    outline: none;
+                    display: block;
+                    width: 64px;
+                    height: 64px;
+                    text-indent: -99999px;
+                    margin-top: -32px;
+                    padding: 0;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    background: none;
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    &.slick-prev {
+                        left: 30px;
+                        background-image: url(/comm/img/office/ico_prev.png);
+                    }
+                    &.slick-next {
+                        right: 30px;
+                        background-image: url(/comm/img/office/ico_next.png);
+                    }
+                }
+            }
+            .slick-dots {
+                position: absolute;
+                bottom: 25px;
+                left: 0;
+                width: 100%;
+                height: 18px;
+                text-align: center;
+                > li {
+                    display: inline-block;
+                    > button {
+                        cursor: pointer;
+                        outline: none;
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        text-indent: -999999px;
+                        margin: 0 5px;
+                        padding: 0;
+                        border-radius: 50%;
+                        border: 1px solid #fff;
+                        background: none;
+                    }
+                    &.slick-active {
+                        > button {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        article {
+            & ~ article {
+                margin-top: 100px;
+            }
+            .article-header {
+                position: relative;
+                text-align: center;
+                h5 {
+                    position: relative;
+                    z-index: 1;
+                    display: inline-block;
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #57575a;
+                    padding: 0 45px;
+                    @include roboto();
+                    background-color: #fff;
+                }
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    border-top: 1px solid #939598;
+                    content: "";
+                }
+            }
+            .article-content {
+                margin-top: 60px;
+            }
+            &.staff {
+                .article-content {
+                    > ul {
+                        > li {
+                            overflow: hidden;
+                            .staff-img {
+                                float: left;
+                                width: 500px;
+                                figure {
+                                    .img-fluid {
+                                        display: block;
+                                        margin: 0 auto;
+                                    }
+                                }
+                                > h6 {
+                                    font-size: 35px;
+                                    color: #57575a;
+                                    font-weight: 600;
+                                    @include dh();
+                                    margin: 25px 0 0 210px;
+                                    small {
+                                        font-weight: 300;
+                                        font-size: 20px;
+                                        @include noto();
+                                    }
+                                }
+                            }
+                            .staff-information {
+                                position: relative;
+                                float: left;
+                                width: 735px;
+                                z-index: 1;
+                                margin-top: 100px;
+                                > h6 {
+                                    font-size: 35px;
+                                    color: #57575a;
+                                    font-weight: 600;
+                                    margin-bottom: 40px;
+                                    @include dh();
+                                    small {
+                                        font-weight: 300;
+                                        font-size: 20px;
+                                        @include noto();
+                                    }
+                                }
+                                .history {
+                                    width: 735px;
+                                    min-height: 290px;
+                                    text-align: left;
+                                    padding: 40px 40px 50px;
+                                    border: 5px solid #dfdfdf;
+                                    > h6 {
+                                        font-size: 20px;
+                                        color: #57575a;
+                                        font-weight: 300;
+                                        margin-bottom: 25px;
+                                        & ~ h6 {
+                                            margin-top: 45px;
+                                        }
+                                        &.broadcast {
+                                            font-size: 15px;
+                                            width: 100px;
+                                            height: 30px;
+                                            line-height: 30px;
+                                            text-align: center;
+                                            color: #fff;
+                                            background-color: #939598;
+                                        }
+                                    }
+                                    > .dot-list {
+                                        overflow: hidden;
+                                        > li {
+                                            float: left;
+                                            width: 50%;
+                                            font-size: 14px;
+                                            color: #57575a;
+                                            &:nth-of-type(2n + 1) {
+                                                clear: left;
+                                            }
+                                        }
+                                        &.long {
+                                            > li {
+                                                width: 100%;
+                                                float: none !important;
+                                                clear: none !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            & ~ li {
+                                margin-top: 85px;
+                            }
+                            &:nth-of-type(odd) {
+                                .staff-information {
+                                    text-align: left;
+                                    margin-left: -65px;
+                                    > h6 {
+                                        margin-left: 115px;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(even) {
+                                .staff-information {
+                                    text-align: right;
+                                    margin-right: -65px;
+                                    > h6 {
+                                        margin-right: 115px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .activity {
+                    margin-top: 60px;
+                    > ul {
+                        overflow: hidden;
+                        > li {
+                            float: left;
+                            width: 33.3333333%;
+                            > dl {
+                                > dt {
+                                    width: 100px;
+                                    font-size: 15px;
+                                    line-height: 30px;
+                                    font-weight: 300;
+                                    color: #fff;
+                                    text-align: center;
+                                    margin-bottom: 30px;
+                                    background-color: #939598;
+                                }
+                                > dd {
+                                    margin-bottom: 0;
+                                    > .dot-list {
+                                        > li {
+                                            font-weight: 300;
+                                            color: #57575a;
+                                            padding-left: 15px;
+                                            &:before {
+                                                color: #939598;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                padding-left: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.location {
+                .article-content {
+                    .sub-title {
+                        margin-bottom: 15px;
+                    }
+                    .maps {
+                        .daum-map {
+                            .root_daum_roughmap {
+                                .wrap_controllers {
+                                    display: none;
+                                }
+                                .map_border {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .details {
+                            display: block;
+                            text-align: center;
+                            line-height: 60px;
+                            border: 5px solid #dfdfdf;
+                            p {
+                                display: inline-block;
+                                font-size: 16px;
+                                color: #57575a;
+                                line-height: 22px;
+                                font-weight: 300;
+                                &:after {
+                                    display: inline-block;
+                                    margin: 0 5px 0 3px;
+                                    content: "/";
+                                }
+                                &:last-child {
+                                    &:after {
+                                        content: "";
+                                        margin: 0;
+                                    }
+                                }
+                                b {
+                                    font-weight: 500;
+                                }
+                                span {
+                                    display: inline-block;
+                                    width: 22px;
+                                    height: 22px;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    color: #fff;
+                                    line-height: 24px;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                    @include roboto();
+                                }
+                                &.seven {
+                                    b {
+                                        color: #6b7b2b;
+                                    }
+                                    span {
+                                        background-color: #6b7b2b;
+                                    }
+                                }
+                                &.two {
+                                    b {
+                                        color: #10aa18;
+                                    }
+                                    span {
+                                        background-color: #10aa18;
+                                    }
+                                }
+                                &.three {
+                                    b {
+                                        color: #ef6531;
+                                    }
+                                    span {
+                                        background-color: #ef6531;
+                                    }
+                                }
+                                &.one {
+                                    b {
+                                        color: #3155b5;
+                                    }
+                                    span {
+                                        background-color: #3155b5;
+                                    }
+                                }
+                                &.gyeongui-jungang {
+                                    b {
+                                        color: #55c1c6;
+                                    }
+                                    span {
+                                        width: 70px;
+                                        font-size: 14px;
+                                        border-radius: 30px;
+                                        background-color: #55c1c6;
+                                    }
+                                }
+                                &.sinbundang {
+                                    b {
+                                        color: #de4552;
+                                    }
+                                    span {
+                                        width: 60px;
+                                        border-radius: 30px;
+                                        background-color: #de4552;
+                                    }
+                                }
+                                &.four {
+                                    b {
+                                        color: #0099e5;
+                                    }
+                                    span {
+                                        background-color: #0099e5;
+                                    }
+                                }
+                                &.bus {
+                                    i {
+                                        position: relative;
+                                        top: -1px;
+                                        padding-right: 1px;
+                                        font-size: 12px;
+                                        &:before {
+                                            margin: 0;
+                                        }
+                                    }
+                                    b {
+                                        color: #6498e0;
+                                    }
+                                    span {
+                                        background-color: #6498e0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .office-contact {
+                        margin-top: 40px;
+                        > ul {
+                            > li {
+                                p, address {
+                                    display: block;
+                                    font-size: 16px;
+                                    color: #57575a;
+                                    font-weight: 300;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+                    }
+                    .counseling-center {
+                        margin-top: 60px;
+                        > ul {
+                            overflow: hidden;
+                            padding: 5px 10px 0;
+                            > li {
+                                float: left;
+                                text-align: center;
+                                margin-right: 50px;
+                                .icon-item {
+                                    display: block;
+                                    width: 150px;
+                                    height: 150px;
+                                    text-align: center;
+                                    line-height: 148px;
+                                    border-radius: 50%;
+                                    background-color: #bebfc1;
+                                    img {
+                                        display: inline-block;
+                                    }
+                                }
+                                > p {
+                                    font-size: 16px;
+                                    color: #57575a;
+                                    font-weight: 300;
+                                    margin-top: 20px;
+                                }
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.time {
+                .article-content {
+                    display: table;
+                    width: 100%;
+                    > div {
+                        display: table-cell;
+                        &.table-wrap {
+                            width: 900px;
+                            padding-right: 30px;
+                            .table {
+                                table-layout: fixed;
+                                text-align: center;
+                                thead {
+                                    tr {
+                                        th {
+                                            height: 40px;
+                                            font-size: 14px;
+                                            color: #fff;
+                                            font-weight: 400;
+                                            vertical-align: middle;
+                                            padding: 0;
+                                            border: 0;
+                                            border-right: 1px solid #ccc;
+                                            background-color: #8a7968;
+                                            &:last-child {
+                                                border-right: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            font-size: 14px;
+                                            color: #57575a;
+                                            font-weight: 400;
+                                            line-height: 26px;
+                                            padding: 15px 0;
+                                            vertical-align: middle;
+                                            border: 0;
+                                            border-right: 1px solid #ccc;
+                                            border-bottom: 1px solid #ccc;
+                                            &:first-child {
+                                                background-color: #e9eaea;
+                                            }
+                                            &:last-child {
+                                                border-right: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.details {
+                            width: 270px;
+                            height: 100%;
+                            vertical-align: middle;
+                            text-align: center;
+                            border: 5px solid #dfdfdf;
+                            > dl {
+                                overflow: hidden;
+                                display: inline-block;
+                                margin: 0 auto;
+                                > dt {
+                                    float: left;
+                                    clear: both;
+                                    width: 50px;
+                                    font-size: 14px;
+                                    color: #57575a;
+                                    font-weight: 300;
+                                    line-height: 24px;
+                                    text-align-last: justify;
+                                    letter-spacing: -1px;
+                                    margin-right: 40px;
+                                }
+                                > dd {
+                                    display: inline;
+                                    font-size: 14px;
+                                    color: #57575a;
+                                    line-height: 24px;
+                                    margin-bottom: 0;
+                                    @include roboto();
+                                }
+                            }
+                            .attention {
+                                font-size: 12px;
+                                color: #666;
+                                font-weight: 400;
+                                text-align: left;
+                                line-height: 20px;
+                                margin-top: 20px;
+                                margin-left: 25px;
+                                &:before {
+                                    content: "※ ";
+                                }
+                                & ~ .attention {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* 일산 */
+.office.ilsan {
+    .section-content {
+        .staff {
+            .article-content {
+                > ul {
+                    > li {
+                        .staff-information {
+                            margin-top: 140px;
+                        }
+                    }
+                }
+            }
+        }
+        .time {
+            .article-content {
+                .details {
+                    dl {
+                        dt, dd {
+                            line-height: 22px;
+                        }
+                        /*dd {
+                            line-height: 22px;
+                        }*/
+                    }
+                    .attention {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 신촌홍대 */
+.office.shinshon {
+    .section-content {
+        .time {
+            .article-content {
+                .details {
+                    dl {
+                        dt {
+                            width: 62px;
+                        }
+                    }
+                    .attention {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,509 @@
+@import 'common';
+
+#visual {
+    ul {
+        .slick-slide {
+            outline: none !important;
+            width: 100%;
+            height: 490px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            .slogan {
+                padding-top: 160px;
+                color: #fff;
+                text-align: center;
+                h2 {
+                    position: relative;
+                    bottom: -30px;
+                    opacity: 0;
+                    font-size: 50px;
+                    @include dh();
+                    @include transition($duration: .8s);
+                }
+                hr {
+                    position: relative;
+                    bottom: -30px;
+                    opacity: 0;
+                    display: block;
+                    margin: 25px auto 30px;
+                    width: 50px;
+                    border-top: 3px solid $kcolor;
+                    @include transition($duration: .8s, $delay: .4s);
+                }
+                p {
+                    position: relative;
+                    bottom: -30px;
+                    opacity: 0;
+                    font-size: 16px;
+                    font-weight: lighter;
+                    @include roboto();
+                    letter-spacing: 1.5px;
+                    @include transition($duration: .8s, $delay: .8s);
+                }
+            }
+            &.action {
+                h2 {
+                    bottom: 0;
+                    opacity: 1;
+                }
+                hr {
+                    bottom: 0;
+                    opacity: 1;
+                }
+                p {
+                    bottom: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* office-information */
+.office-information {
+    .section-header {
+        position: relative;
+        z-index: 1;
+        margin-top: -150px;
+        .office-list {
+            overflow: hidden;
+            box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.23);
+            > li {
+                position: relative;
+                width: 33.333333%;
+                height: 150px;
+                float: left;
+                display: table;
+                text-align: center;
+                background-color: #939598;
+                > .summary {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 100%;
+                    height: 100%;
+                    @include transition();
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                }
+                h3 {
+                    font-size: 30px;
+                    color: #fff;
+                    font-weight: 500;
+                    @include dh();
+                    line-height: 26px;
+                    small {
+                        display: block;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        font-weight: 300;
+                        margin-top: 15px;
+                        @include roboto();
+                    }
+                }
+                .hover-details {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    padding-top: 30px;
+                    @include transition();
+                    background-color: $kcolor;
+                    .btn-more {
+                        position: relative;
+                        margin-top: 20px;
+                        .btn-default {
+                            width: 130px;
+                            color: #fff;
+                            font-size: 14px;
+                            line-height: 33px;
+                            text-align: center;
+                            border: 1px solid #fff;
+                            border-radius: 30px;
+                            @include transition();
+                            &:hover {
+                                color: $kcolor;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .hover-details {
+                        opacity: 1;
+                    }
+                }
+                &:nth-of-tyope(3n + 1) {
+                    clear: left;
+                }
+                &.ilsan {
+                    .summary {
+                        background-image: url(/comm/img/main/bg_ilsan.jpg);
+                    }
+                }
+                &.guro {
+                    .summary {
+                        background-image: url(/comm/img/main/bg_guro.jpg);
+                    }
+                }
+                &.suji {
+                    .summary {
+                        background-image: url(/comm/img/main/bg_suji.jpg);
+                    }
+                }
+                &.ansan {
+                    .summary {
+                        background-image: url(/comm/img/main/bg_ansan.jpg);
+                    }
+                }
+                &.dongdaemun {
+                    .summary {
+                        background-image: url(/comm/img/main/bg_dongdaemun.jpg);
+                    }
+                }
+                &.shinchon {
+                    .summary {
+                        background-image: url(/comm/img/main/bg_shinchon.jpg);
+                    }
+                }
+            }
+        }
+    }
+    .section-content {
+        position: relative;
+        margin-top: -150px;
+        min-width: 1200px;
+        height: 783px;
+        padding-left: 1115px;
+        background-color: #8a7968;
+        > article {
+            &.maps {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1115px;
+                figure {
+                    position: relative;
+                    min-width: 1115px;
+                    figcaption {
+                        .nav-tabs {
+                            border: 0;
+                            > li {
+                                > a {
+                                    position: absolute;
+                                    padding: 0;
+                                    border: 0;
+                                    border-radius: 0;
+                                    background: none !important;
+                                }
+                                &.ilsan {
+                                    > a {
+                                        width: 66px;
+                                        height: 51px;
+                                        top: 246px;
+                                        left: 448px;
+                                    }
+                                }
+                                &.guro {
+                                    > a {
+                                        width: 68px;
+                                        height: 50px;
+                                        top: 436px;
+                                        left: 564px;
+                                    }
+                                }
+                                &.suji {
+                                    > a {
+                                        width: 108px;
+                                        height: 50px;
+                                        bottom: 74px;
+                                        right: 314px;
+                                    }
+                                }
+                                &.ansan {
+                                    > a {
+                                        width: 126px;
+                                        height: 50px;
+                                        right: 463px;
+                                        bottom: 136px;
+                                    }
+                                }
+                                &.dongdaemun {
+                                    > a {
+                                        width: 114px;
+                                        height: 45px;
+                                        top: 340px;
+                                        right: 221px;
+                                    }
+                                }
+                                &.shinshon {
+                                    > a {
+                                        width: 156px;
+                                        height: 50px;
+                                        top: 380px;
+                                        right: 340px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.information {
+                position: relative;
+                width: 470px;
+                height: 100%;
+                padding: 210px 0 0 70px;
+                .tab-content {
+                    position: relative;
+                    height: 100%;
+                    .tab-pane {
+                        position: relative;
+                        height: 100%;
+                    }
+                }
+                .details {
+                    position: relative;
+                    height: 100%;
+                    h4 {
+                        font-size: 43px;
+                        color: #fff;
+                        letter-spacing: -.25px;
+                        font-weight: 600;
+                        @include dh();
+                        small {
+                            display: inline-block;
+                            margin-left: 10px;
+                            font-size: 22px;
+                            font-weight: 500;
+                        }
+                    }
+                    > p {
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: rgba(#fff, .6);
+                        margin-top: 15px;
+                        @include roboto();
+                    }
+                    hr {
+                        display: block;
+                        margin: 25px 0 35px;
+                        width: 45px;
+                        border-top: 3px solid #fff;
+                    }
+                    ul {
+                        li {
+                            position: relative;
+                            font-size: 15px;
+                            color: #fff;
+                            line-height: 28px;
+                            font-weight: 300;
+                            padding-left: 25px;
+                            & ~ li {
+                                margin-top: 10px;
+                            }
+                            &:before {
+                                font-size: 13px;
+                                position: absolute;
+                                top: 1px;
+                                left: 0;
+                                font-family: "fontello";
+                            }
+                            &.location {
+                                &:before {
+                                    content: "\F031";
+                                }
+                            }
+                            &.addr {
+                                &:before {
+                                    content: "\E802";
+                                }
+                            }
+                            &.contact {
+                                &:before {
+                                    content: "\E803";
+                                }
+                            }
+                            &.fax {
+                                &:before {
+                                    content: "\E804";
+                                }
+                            }
+                            &.operating-hours {
+                                &:before {
+                                    content: "\E805";
+                                }
+                            }
+                        }
+                    }
+                    .btn-area {
+                        position: absolute;
+                        bottom: 50px;
+                        left: 0;
+                        .btn-white {
+                            width: 230px;
+                            height: 52px;
+                            font-size: 16px;
+                            letter-spacing: -.25px;
+                            color: #fff;
+                            text-align: center;
+                            line-height: 50px;
+                            border: 1px solid #fff;
+                            @include transition();
+                            &:hover {
+                                color: #8a7968;
+                                border-color: #fff;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* branch-offices-guide */
+.branch-offices-guide {
+    padding: 25px;
+    > article {
+        width: 100%;
+        height: 475px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        & ~ article {
+            margin-top: 25px;
+        }
+        .details {
+            padding-top: 60px;
+            h3 {
+                font-size: 48px;
+                color: #57575a;
+                font-weight: 600;
+                letter-spacing: -1px;
+                @include dh();
+                small {
+                    display: inline-block;
+                    font-size: 25px;
+                    color: #57575a;
+                    font-weight: 600;
+                    letter-spacing: -.5px;
+                }
+            }
+            p {
+                font-size: 22px;
+                color: #57575a;
+                font-weight: 400;
+                @include dh();
+                margin-top: 5px;
+            }
+            > dl {
+                overflow: hidden;
+                margin-top: 35px;
+                > dt {
+                    float: left;
+                    clear: both;
+                    width: 70px;
+                    font-size: 13px;
+                    color: #fff;
+                    letter-spacing: -1px;
+                    font-weight: 400;
+                    line-height: 25px;
+                    text-align-last: justify;
+                    padding: 0 10px;
+                    margin-right: 30px;
+                    margin-bottom: 3px;
+                    border-radius: 8px;
+                    background-color: #57575a;
+                }
+                > dd {
+                    float: left;
+                    font-size: 15px;
+                    color: #57575a;
+                    font-weight: 400;
+                    letter-spacing: -.5px;
+                    line-height: 25px;
+                    margin-bottom: 3px;
+                    > ul {
+                        > li {
+                            > dl {
+                                font-size: 0;
+                                > dt {
+                                    width: 62px;
+                                    display: inline-block;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    color: #57575a;
+                                    text-align-last: justify;
+                                    margin-bottom: 0;
+                                    &:after {
+                                        display: inline-block;
+                                        font-size: 10px;
+                                        content: "";
+                                        width: 2px;
+                                        height: 11px;
+                                        border-left: 1px solid #9c9c99;
+                                        border-right: 1px solid #606062;
+                                        margin: 0 10px;
+                                    }
+                                }
+                                > dd {
+                                    display: inline-block;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    color: #57575a;
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                        }
+                        &.space {
+                            > li {
+                                > dl {
+                                    > dt {
+                                        width: 87px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-of-type(even) {
+            overflow: hidden;
+            .details {
+                position: relative;
+                float: right;
+                width: 470px;
+                > dl {
+                    > dt {
+                        background-color: #8a7968;
+                    }
+                }
+            }
+        }
+        &.ilsan {
+            background-image: url(/comm/img/main/bg_guide_ilsan.jpg);
+        }
+        &.guro {
+            background-image: url(/comm/img/main/bg_guide_guro.jpg);
+        }
+        &.suji {
+            background-image: url(/comm/img/main/bg_guide_suji.jpg);
+        }
+        &.ansan {
+            background-image: url(/comm/img/main/bg_guide_ansan.jpg);
+        }
+        &.dongdeamun {
+            background-image: url(/comm/img/main/bg_guide_dongdeamun.jpg);
+        }
+        &.shinchon {
+            background-image: url(/comm/img/main/bg_guide_shinchon.jpg);
+        }
+    }
+}
